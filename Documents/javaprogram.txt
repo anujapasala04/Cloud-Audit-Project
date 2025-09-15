@@ -1,0 +1,7 @@
+class Java
+{
+psvm(S[]a)
+{
+  System.out.println("Hello World!");
+}
+}

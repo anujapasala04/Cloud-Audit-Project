@@ -1,0 +1,118 @@
+CREATE DATABASE   `SecureDataGroup` ;
+
+USE `SecureDataGroup`;
+
+CREATE TABLE `attacker` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text,
+  `fname` text,
+  `sk` text,
+  `dt` text,
+  `attacktype` text,
+  PRIMARY KEY  (`id`)
+) ;
+
+
+CREATE TABLE `cloudserver` (
+  `id` int(11) NOT NULL auto_increment,
+  `fname` text,
+  `ct` text,
+  `trapdoor` text,
+  `sk` text,
+  `rank` int(11) default NULL,
+  `dt` text,
+  `Doc` text,
+  `downer` text,
+  PRIMARY KEY  (`id`)
+);
+
+
+CREATE TABLE `decryption` (
+  `name` text,
+  `pass` text
+) ;
+
+INSERT INTO `decryption` VALUES ('decrypt','decrypt');
+
+
+CREATE TABLE `downer` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text,
+  `pass` text,
+  `email` text,
+  `mobile` text,
+  `addr` text,
+  `dob` text,
+  `gender` text,
+  `pin` text,
+  `location` text,
+  `imagess` longblob,
+  PRIMARY KEY  (`id`)
+) ;
+
+
+CREATE TABLE `keygen` (
+  `name` text,
+  `pass` text
+) ;
+
+INSERT INTO `keygen` VALUES ('keygen','keygen');
+
+CREATE TABLE `request` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text,
+  `owner` text,
+  `fname` text,
+  `sk` text,
+  `decrypt` text,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `search` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text,
+  `keyword` text,
+  `dt` text,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `storage` (
+  `name` text,
+  `pass` text
+);
+
+INSERT INTO `storage` VALUES ('store','store');
+
+CREATE TABLE `transaction` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text,
+  `fname` text,
+  `sk` text,
+  `task` text,
+  `dt` text,
+  PRIMARY KEY  (`id`)
+);
+
+
+CREATE TABLE `trust` (
+  `name` text,
+  `pass` text
+);
+
+INSERT INTO `trust` VALUES ('trust','trust');
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text,
+  `pass` text,
+  `email` text,
+  `mobile` text,
+  `addr` text,
+  `dob` text,
+  `gender` text,
+  `pin` text,
+  `location` text,
+  `imagess` longblob,
+  PRIMARY KEY  (`id`)
+);
+

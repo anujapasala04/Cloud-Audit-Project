@@ -1,0 +1,4 @@
+
+Nowadays, many people use cloud storage to save and access their data anytime and from anywhere. While this is very convenient, it also brings security problems—especially because users lose direct control over their data. This means hackers or even cloud providers might change or delete data without permission.
+To solve this, researchers created special auditing systems. These allow third-party auditors to check if the data is safe and unchanged—without seeing the actual content, so privacy is protected.
+One such system claims to offer strong features like keeping data private, tracking who is responsible, and supporting group access. But when studied closely, it has some serious problems. It can be tricked by something called **tag forgery** and **proof forgery**. This means a bad cloud provider can pretend everything is fine—even if they secretly deleted some data—by faking the checks and fooling the auditor.
